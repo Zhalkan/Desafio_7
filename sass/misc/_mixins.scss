@@ -1,0 +1,15 @@
+/* Helpers - esto sirve para usar a lo largo del proyecto*/
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px; /*ancho máximo. La etiqueta no va a crecer mas de eso para que no se estire*/
+    margin: 0 auto;
+}

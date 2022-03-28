@@ -1,0 +1,83 @@
+/* Header & Navbar */
+header {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    grid-column: 1 / 5;
+
+    .navbar {
+        min-height: 10vh; /*esto es para que quede como mínimo de 10vh el navbar*/
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem; /*esto es para que quede un pequeño margen a los costados cuando se achique la pantalla, los 2 rem */
+        
+        picture img {
+            animation: rotation 3s ease-in-out infinite;  
+        }
+    }
+
+    .menu {
+        flex-basis: 65%; /*para determinar cuanto del elemento padre va a ocupar el menú*/
+        justify-content: flex-end;
+        
+        &__item{
+
+            .menu__link {
+            font-size: 1.3em; /* tamaño letra 18px */
+            padding: 1rem; /*10px a todos los lados. Esto sirve para que ponga un padding y se pueda clickear el item no solo en las letras sino cerca también*/
+            transition: all .3s ease-in-out;
+
+                &:hover{
+                    color: #a7a7a7;
+                }
+            }
+
+            .sub-menu {
+                display: none;
+                position: absolute;
+
+                &__link {
+                    padding: 1rem;
+                    font-size: 1.4em;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        color: #a7a7a7;
+                    }
+                }
+            }
+
+            &:hover{
+                .sub-menu {
+                    display: block;
+                    background-color: $principal;
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+@media screen and (max-width: 668px) {
+
+    header {
+        padding: 2em 0;
+
+        .navbar {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

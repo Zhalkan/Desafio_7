@@ -1,0 +1,162 @@
+/*Sección principal*/
+
+#banner{
+    width: 100%;
+}
+
+.bannersection {
+    gap: 2rem;
+    align-items: center;
+    padding: 0 2em;
+    grid-column: 1 / 5;
+    grid-row: 1;
+}
+.presentation {
+    gap: 2rem;
+    align-items: center;
+    padding: 0 2em;
+    grid-column: 1 / 5;
+    grid-row: 2;
+}
+
+.socios {
+    gap: 15rem;
+    align-items: center;
+    padding: 2em 2em;
+    grid-column: 1 / 5;
+    grid-row: 2;
+
+    &_columnOne{
+        flex-basis: 50%;
+        color: $secondary;
+    }
+
+    &_columnTwo{
+        flex-basis: 50%;
+        color: $secondary;
+    }
+}
+
+.presentation{
+
+    &__picture {
+        flex-basis: 50%;
+        min-width: 320px;
+    }
+
+    &__img {
+        width: 100%;
+        padding: 1.5em 0;
+    }
+
+    &__description {
+        flex-basis: 50%;
+        color: $secondary;
+    }
+
+    &__container {
+        
+        p {
+        font-size: 1.6em;
+        padding-top: 0.5em;
+        text-align: justify;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+    }
+}
+
+.equipo__picture .equipo__img {
+    padding-top: 0.5em;
+}
+
+.socio_text{
+    padding: 2em 0;
+}
+
+@media screen and (max-width: 668px) {
+
+    .presentation {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: .6em;
+
+        &__container {
+
+            h1{
+                padding: 2 0em;
+            }
+
+            p {
+                font-size: 1.6em;
+                padding: 1em;
+            }
+        }
+
+        &__picture {
+            flex-grow: 1;
+
+            .presentation__img {
+                max-height: 600px;
+                max-width: 350px;
+            }
+        }
+
+        &__description {
+            flex-grow: 1;
+            order: -1;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    .equipo__picture {
+        flex-grow: 1;
+
+        .equipo__img {
+            max-height: 600px;
+            max-width: 350px;
+        }
+    }
+  
+    .socios {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: .6em;
+        gap: 1em;
+
+        &_columnOne{
+            flex-grow: 1;
+        }
+
+        &_columnTwo{
+            flex-grow: 1;
+            order: -1;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+ /*LOGOS QUE VAN A QUEDAR FIJOS PARA CONTACTO*/
+ #logocontacto {
+    position: fixed;
+    z-index: 10;
+    overflow: hidden; 
+    display: block;
+    right: 10px;
+    bottom: 5px;
+}
+
+  #logo_mail {
+    position: fixed;
+    z-index: 10;
+    overflow: hidden; 
+    display: block;
+    right: 10px;
+    bottom: 50px;
+}

@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/*VARIABLES*/
+/* Variables */
+/*GLOBALES*/
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Inter:wght@300;500;700&display=swap");
+/* Normalize */
+*,
+* ::after,
+* ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Globals */
+html {
+  font-size: 62.5%;
+  /* esto sirve para "hackear" el navegador, ya que le pone por defecto 16px al tamaño de la letra. Con esto lo dejamos en 10px*/
+  font-family: "Inter", sans-serif;
+  color: #0b0c0d; }
+
+body {
+  display: grid;
+  min-height: 100vh;
+  /*tamaño de las columnas*/
+  grid-template-columns: repeat(4, 1fr);
+  /* el ancho de la pantalla se divide en 4 y a cada uno le corresponde 1fr*/
+  grid-template-rows: 15% 75% 10%;
+  /*tamaño de las 3 filas - header, main y footer*/
+  background-image: linear-gradient(to right top, #535358, #484857, #3d3c56, #323155, #262653); }
+
+header a {
+  font-size: 2em;
+  /* con el 62,5% que hicimos antes ahora 1rem=10px.*/
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  /* para que tome los rellenos y le de vista a los botones del submenú*/ }
+
+ul {
+  list-style-type: none; }
+
+/* Helpers - esto sirve para usar a lo largo del proyecto*/
+.flex-row {
+  display: flex; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column; }
+
+.container {
+  max-width: 1080px;
+  /*ancho máximo. La etiqueta no va a crecer mas de eso para que no se estire*/
+  margin: 0 auto; }
+
+/*PARTIALS*/
+/* Header & Navbar */
+header {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  grid-column: 1 / 5; }
+  header .navbar {
+    min-height: 10vh;
+    /*esto es para que quede como mínimo de 10vh el navbar*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    /*esto es para que quede un pequeño margen a los costados cuando se achique la pantalla, los 2 rem */ }
+    header .navbar picture img {
+      animation: rotation 3s ease-in-out infinite; }
+  header .menu {
+    flex-basis: 65%;
+    /*para determinar cuanto del elemento padre va a ocupar el menú*/
+    justify-content: flex-end; }
+    header .menu__item .menu__link {
+      font-size: 1.3em;
+      /* tamaño letra 18px */
+      padding: 1rem;
+      /*10px a todos los lados. Esto sirve para que ponga un padding y se pueda clickear el item no solo en las letras sino cerca también*/
+      transition: all .3s ease-in-out; }
+      header .menu__item .menu__link:hover {
+        color: #a7a7a7; }
+    header .menu__item .sub-menu {
+      display: none;
+      position: absolute; }
+      header .menu__item .sub-menu__link {
+        padding: 1rem;
+        font-size: 1.4em;
+        transition: all .3s ease-in-out; }
+        header .menu__item .sub-menu__link:hover {
+          color: #a7a7a7; }
+    header .menu__item:hover .sub-menu {
+      display: block;
+      background-color: #0b0c0d; }
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg); }
+  20% {
+    transform: rotate(20deg); }
+  100% {
+    transform: rotate(-360deg); } }
+
+@media screen and (max-width: 668px) {
+  header {
+    padding: 2em 0; }
+    header .navbar {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; } }
+
+/*footer*/
+footer {
+  background-color: rgba(105, 105, 105, 0.37);
+  grid-column: 1 / 5;
+  grid-row: 3;
+  text-align: center;
+  color: #fff;
+  height: 10vh; }
+  footer a {
+    text-decoration: none; }
+
+/*VIEWS*/
+/*Sección principal*/
+#banner {
+  width: 100%; }
+
+.bannersection {
+  gap: 2rem;
+  align-items: center;
+  padding: 0 2em;
+  grid-column: 1 / 5;
+  grid-row: 1; }
+
+.presentation {
+  gap: 2rem;
+  align-items: center;
+  padding: 0 2em;
+  grid-column: 1 / 5;
+  grid-row: 2; }
+
+.socios {
+  gap: 15rem;
+  align-items: center;
+  padding: 2em 2em;
+  grid-column: 1 / 5;
+  grid-row: 2; }
+  .socios_columnOne {
+    flex-basis: 50%;
+    color: #fff; }
+  .socios_columnTwo {
+    flex-basis: 50%;
+    color: #fff; }
+
+.presentation__picture {
+  flex-basis: 50%;
+  min-width: 320px; }
+
+.presentation__img {
+  width: 100%;
+  padding: 1.5em 0; }
+
+.presentation__description {
+  flex-basis: 50%;
+  color: #fff; }
+
+.presentation__container p {
+  font-size: 1.6em;
+  padding-top: 0.5em;
+  text-align: justify; }
+
+.presentation__container h1 {
+  font-size: 3em; }
+
+.equipo__picture .equipo__img {
+  padding-top: 0.5em; }
+
+.socio_text {
+  padding: 2em 0; }
+
+@media screen and (max-width: 668px) {
+  .presentation {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: .6em; }
+    .presentation__container h1 {
+      padding: 2 0em; }
+    .presentation__container p {
+      font-size: 1.6em;
+      padding: 1em; }
+    .presentation__picture {
+      flex-grow: 1; }
+      .presentation__picture .presentation__img {
+        max-height: 600px;
+        max-width: 350px; }
+    .presentation__description {
+      flex-grow: 1;
+      order: -1;
+      display: flex;
+      flex-direction: column; }
+  .equipo__picture {
+    flex-grow: 1; }
+    .equipo__picture .equipo__img {
+      max-height: 600px;
+      max-width: 350px; }
+  .socios {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: .6em;
+    gap: 1em; }
+    .socios_columnOne {
+      flex-grow: 1; }
+    .socios_columnTwo {
+      flex-grow: 1;
+      order: -1;
+      display: flex;
+      flex-direction: column; } }
+
+/*LOGOS QUE VAN A QUEDAR FIJOS PARA CONTACTO*/
+#logocontacto {
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  display: block;
+  right: 10px;
+  bottom: 5px; }
+
+#logo_mail {
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  display: block;
+  right: 10px;
+  bottom: 50px; }
