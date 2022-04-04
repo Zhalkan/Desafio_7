@@ -176,9 +176,6 @@ footer {
 .presentation__container h1 {
   font-size: 3em; }
 
-.equipo__picture .equipo__img {
-  padding-top: 0.5em; }
-
 .socio_text {
   padding: 2em 0; }
 
@@ -203,11 +200,12 @@ footer {
       order: -1;
       display: flex;
       flex-direction: column; }
-  .equipo__picture {
+  .equipo__picture, .equipo__img {
     flex-grow: 1; }
-    .equipo__picture .equipo__img {
-      max-height: 600px;
-      max-width: 350px; }
+  .equipo__img {
+    max-height: 600px;
+    max-width: 350px;
+    padding-top: 0.5em; }
   .socios {
     flex-wrap: wrap;
     justify-content: center;
@@ -238,7 +236,7 @@ footer {
 .sp-xsmall {
   padding: 1rem; }
 
-#logocontacto {
+#logo_mail {
   position: fixed;
   z-index: 10;
   overflow: hidden;

@@ -68,10 +68,6 @@
     }
 }
 
-.equipo__picture .equipo__img {
-    padding-top: 0.5em;
-}
-
 .socio_text{
     padding: 2em 0;
 }
@@ -115,13 +111,15 @@
     
     .equipo__picture {
         flex-grow: 1;
-
-        .equipo__img {
-            max-height: 600px;
-            max-width: 350px;
-        }
     }
-  
+
+    .equipo__img {
+        @extend .equipo__picture;
+        max-height: 600px;
+        max-width: 350px;
+        padding-top: 0.5em;
+    }
+
     .socios {
         flex-wrap: wrap;
         justify-content: center;
@@ -184,10 +182,10 @@ $spacings:( /*declaramos nuestro mapa*/
     bottom: $bottom;
 }
 
-#logocontacto {
-@include logos(fixed, 10, hidden, block, 10px, 5px)
+#logo_mail {
+    @include logos(fixed, 10, hidden, block, 10px, 5px)
 }
 
 #logocontacto {
     @include logos(fixed, 10, hidden, block, 10px, 50px)
-    }
+}
