@@ -160,3 +160,17 @@
     right: 10px;
     bottom: 50px;
 }
+
+$spacings:( /*declaramos nuestro mapa*/
+    xlarge: 5rem,
+    large: 3rem,
+    medium: 2rem, 
+    small: 1.5rem, 
+    xsmall: 1rem
+);
+
+@each $var, $val in $spacings {
+    .sp-#{$var} {
+        padding: #{$val};
+    }
+}
