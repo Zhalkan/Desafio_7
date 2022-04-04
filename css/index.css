@@ -223,22 +223,6 @@ footer {
       flex-direction: column; } }
 
 /*LOGOS QUE VAN A QUEDAR FIJOS PARA CONTACTO*/
-#logocontacto {
-  position: fixed;
-  z-index: 10;
-  overflow: hidden;
-  display: block;
-  right: 10px;
-  bottom: 5px; }
-
-#logo_mail {
-  position: fixed;
-  z-index: 10;
-  overflow: hidden;
-  display: block;
-  right: 10px;
-  bottom: 50px; }
-
 .sp-xlarge {
   padding: 5rem; }
 
@@ -253,3 +237,19 @@ footer {
 
 .sp-xsmall {
   padding: 1rem; }
+
+#logocontacto {
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  display: block;
+  right: 10px;
+  bottom: 5px; }
+
+#logocontacto {
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  display: block;
+  right: 10px;
+  bottom: 50px; }

@@ -143,23 +143,23 @@
 }
 
  /*LOGOS QUE VAN A QUEDAR FIJOS PARA CONTACTO*/
- #logocontacto {
-    position: fixed;
-    z-index: 10;
-    overflow: hidden; 
-    display: block;
-    right: 10px;
-    bottom: 5px;
-}
+//  #logocontacto {
+//     position: fixed;
+//     z-index: 10;
+//     overflow: hidden; 
+//     display: block;
+//     right: 10px;
+//     bottom: 5px;
+// }
 
-  #logo_mail {
-    position: fixed;
-    z-index: 10;
-    overflow: hidden; 
-    display: block;
-    right: 10px;
-    bottom: 50px;
-}
+//   #logo_mail {
+//     position: fixed;
+//     z-index: 10;
+//     overflow: hidden; 
+//     display: block;
+//     right: 10px;
+//     bottom: 50px;
+// }
 
 $spacings:( /*declaramos nuestro mapa*/
     xlarge: 5rem,
@@ -174,3 +174,20 @@ $spacings:( /*declaramos nuestro mapa*/
         padding: #{$val};
     }
 }
+
+@mixin logos($position, $z, $overflow, $display, $right, $bottom) {
+    position: $position;
+    z-index: $z;
+    overflow: $overflow;
+    display: $display;
+    right: $right;
+    bottom: $bottom;
+}
+
+#logocontacto {
+@include logos(fixed, 10, hidden, block, 10px, 5px)
+}
+
+#logocontacto {
+    @include logos(fixed, 10, hidden, block, 10px, 50px)
+    }
