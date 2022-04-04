@@ -1,3 +1,3 @@
-# Desafio 6
+# Desafio 7
 
-### Ver [DEMO](https://zhalkan.github.io/Desafio_6/) del sitio
+### Ver [DEMO](https://zhalkan.github.io/Desafio_7/) del sitio

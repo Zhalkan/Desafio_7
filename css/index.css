@@ -79,6 +79,9 @@ header {
       padding: 1rem;
       /*10px a todos los lados. Esto sirve para que ponga un padding y se pueda clickear el item no solo en las letras sino cerca también*/
       transition: all .3s ease-in-out; }
+      header .menu__item .menu__link__active {
+        font-size: 1.5em;
+        border-bottom: 2px solid white; }
       header .menu__item .menu__link:hover {
         color: #a7a7a7; }
     header .menu__item .sub-menu {
