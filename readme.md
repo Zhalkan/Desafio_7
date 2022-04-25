@@ -1,3 +1,3 @@
 # Proyecto final curso Desarrollo Web CODERHOUSE
 
-### Ver [DEMO](https://zhalkan.github.io/PROYECTOFINAL/) del sitio
+### Ver [DEMO](https://zhalkan.github.io/Desafio_7/) del sitio
