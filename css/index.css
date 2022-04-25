@@ -13,32 +13,11 @@
   box-sizing: border-box; }
 
 /* Globals */
-html {
-  font-size: 62.5%;
-  /* esto sirve para "hackear" el navegador, ya que le pone por defecto 16px al tamaño de la letra. Con esto lo dejamos en 10px*/
-  font-family: "Inter", sans-serif;
-  color: #0b0c0d; }
-
-body {
-  display: grid;
-  min-height: 100vh;
-  /*tamaño de las columnas*/
-  grid-template-columns: repeat(4, 1fr);
-  /* el ancho de la pantalla se divide en 4 y a cada uno le corresponde 1fr*/
-  grid-template-rows: 15% 75% 10%;
-  /*tamaño de las 3 filas - header, main y footer*/
-  background-image: linear-gradient(to right top, #535358, #484857, #3d3c56, #323155, #262653); }
-
-header a {
-  font-size: 2em;
-  /* con el 62,5% que hicimos antes ahora 1rem=10px.*/
-  text-decoration: none;
-  color: #fff;
-  display: inline-block;
-  /* para que tome los rellenos y le de vista a los botones del submenú*/ }
-
 ul {
   list-style-type: none; }
+
+body {
+  background-image: linear-gradient(to right bottom, #ffffff, #ececec, #d9d9d9, #c7c7c7, #b5b5b5) !important; }
 
 /* Helpers - esto sirve para usar a lo largo del proyecto*/
 .flex-row {
@@ -48,86 +27,51 @@ ul {
   display: flex;
   flex-direction: column; }
 
-.container {
-  max-width: 1080px;
-  /*ancho máximo. La etiqueta no va a crecer mas de eso para que no se estire*/
-  margin: 0 auto; }
-
 /*PARTIALS*/
 /* Header & Navbar */
-header {
-  background: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  width: 100%;
-  grid-column: 1 / 5; }
-  header .navbar {
-    min-height: 10vh;
-    /*esto es para que quede como mínimo de 10vh el navbar*/
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    /*esto es para que quede un pequeño margen a los costados cuando se achique la pantalla, los 2 rem */ }
-    header .navbar picture img {
-      animation: rotation 3s ease-in-out infinite; }
-  header .menu {
-    flex-basis: 65%;
-    /*para determinar cuanto del elemento padre va a ocupar el menú*/
-    justify-content: flex-end; }
-    header .menu__item .menu__link {
-      font-size: 1.3em;
-      /* tamaño letra 18px */
-      padding: 1rem;
-      /*10px a todos los lados. Esto sirve para que ponga un padding y se pueda clickear el item no solo en las letras sino cerca también*/
-      transition: all .3s ease-in-out; }
-      header .menu__item .menu__link__active {
-        font-size: 1.5em;
-        border-bottom: 2px solid white; }
-      header .menu__item .menu__link:hover {
-        color: #a7a7a7; }
-    header .menu__item .sub-menu {
-      display: none;
-      position: absolute; }
-      header .menu__item .sub-menu__link {
-        padding: 1rem;
-        font-size: 1.4em;
-        transition: all .3s ease-in-out; }
-        header .menu__item .sub-menu__link:hover {
-          color: #a7a7a7; }
-    header .menu__item:hover .sub-menu {
-      display: block;
-      background-color: #0b0c0d; }
+.navbar-light {
+  background-color: white !important; }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg); }
-  20% {
-    transform: rotate(20deg); }
-  100% {
-    transform: rotate(-360deg); } }
-
-@media screen and (max-width: 668px) {
-  header {
-    padding: 2em 0; }
-    header .navbar {
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center; } }
+.bannersection {
+  margin-top: 4.5rem !important; }
 
 /*footer*/
 footer {
-  background-color: rgba(105, 105, 105, 0.37);
   grid-column: 1 / 5;
   grid-row: 3;
   text-align: center;
   color: #fff;
-  height: 10vh; }
-  footer a {
-    text-decoration: none; }
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center a;
+    align-items-text-decoration: none; }
+
+.btn-redes {
+  text-align: center;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  height: 3rem;
+  width: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  color: #fff;
+  background-color: #212529; }
+
+.btn-redes:hover {
+  background-color: #1c1f23; }
 
 /*VIEWS*/
 /*Sección principal*/
 #banner {
   width: 100%; }
+
+.container {
+  width: 100% !important; }
 
 .bannersection {
   gap: 2rem;
@@ -168,14 +112,6 @@ footer {
   flex-basis: 50%;
   color: #fff; }
 
-.presentation__container p {
-  font-size: 1.6em;
-  padding-top: 0.5em;
-  text-align: justify; }
-
-.presentation__container h1 {
-  font-size: 3em; }
-
 .socio_text {
   padding: 2em 0; }
 
@@ -185,11 +121,6 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: .6em; }
-    .presentation__container h1 {
-      padding: 2 0em; }
-    .presentation__container p {
-      font-size: 1.6em;
-      padding: 1em; }
     .presentation__picture {
       flex-grow: 1; }
       .presentation__picture .presentation__img {
@@ -220,7 +151,6 @@ footer {
       display: flex;
       flex-direction: column; } }
 
-/*LOGOS QUE VAN A QUEDAR FIJOS PARA CONTACTO*/
 .sp-xlarge {
   padding: 5rem; }
 
@@ -251,3 +181,65 @@ footer {
   display: block;
   right: 10px;
   bottom: 50px; }
+
+.page-section {
+  padding: 7rem 0 2rem 0; }
+
+.text-center {
+  text-align: center !important; }
+
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important; }
+
+.px-lg-5 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important; }
+
+.mt-0 {
+  margin-top: 0 !important; }
+
+.team-member {
+  margin-bottom: 3rem;
+  text-align: center; }
+
+.team-member img {
+  width: 10rem !important;
+  height: 10rem !important;
+  border: 0.5rem solid rgba(0, 0, 0, 0.1); }
+
+.team-member h4, .team-member .h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0; }
+
+.text-lg-start {
+  color: black !important; }
+
+.footer {
+  margin-bottom: 1.5rem; }
+
+.alinear_centro {
+  justify-items: center !important; }
+
+.section_one {
+  padding-bottom: 2rem; }
+
+.section_two {
+  padding-bottom: 2rem; }
+
+.page-section {
+  color: none; }
+
+.card {
+  margin-bottom: 2rem; }
+
+.alinear_centro {
+  margin: auto !important; }
+
+.link {
+  color: black !important;
+  text-decoration: none;
+  font-weight: bold; }
+
+.full {
+  width: 100% !important; }

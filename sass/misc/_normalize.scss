@@ -14,28 +14,10 @@
 
 /* Globals */
 
-html {
-    font-size: 62.5%; /* esto sirve para "hackear" el navegador, ya que le pone por defecto 16px al tamaño de la letra. Con esto lo dejamos en 10px*/
-    font-family: $font-primary;
-    color: $principal;
+ul {
+    list-style-type: none;
 }
 
 body {
-    display: grid;
-    min-height: 100vh;
-     /*tamaño de las columnas*/
-    grid-template-columns: repeat(4, 1fr); /* el ancho de la pantalla se divide en 4 y a cada uno le corresponde 1fr*/
-    grid-template-rows: 15% 75% 10%; /*tamaño de las 3 filas - header, main y footer*/
-    background-image: linear-gradient(to right top, #535358, #484857, #3d3c56, #323155, #262653);
-}
-
-header a {
-    font-size: 2em; /* con el 62,5% que hicimos antes ahora 1rem=10px.*/
-    text-decoration: none;
-    color: $secondary; 
-    display: inline-block; /* para que tome los rellenos y le de vista a los botones del submenú*/
-}
-
-ul {
-    list-style-type: none;
+    background-image: linear-gradient(to right bottom, #ffffff, #ececec, #d9d9d9, #c7c7c7, #b5b5b5)!important;
 }

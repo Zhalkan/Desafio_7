@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.container {
+    width: 100%!important;
+}
+
 .bannersection {
     gap: 2rem;
     align-items: center;
@@ -54,18 +58,18 @@
         color: $secondary;
     }
 
-    &__container {
+    // &__container {
         
-        p {
-        font-size: 1.6em;
-        padding-top: 0.5em;
-        text-align: justify;
-        }
+    //     p {
+    //     font-size: 1.6em;
+    //     padding-top: 0.5em;
+    //     text-align: justify;
+    //     }
 
-        h1 {
-            font-size: 3em;
-        }
-    }
+    //     h1 {
+    //         font-size: 3em;
+    //     }
+    // }
 }
 
 .socio_text{
@@ -80,17 +84,17 @@
         align-items: center;
         font-size: .6em;
 
-        &__container {
+        // &__container {
 
-            h1{
-                padding: 2 0em;
-            }
+        //     h1{
+        //         padding: 2 0em;
+        //     }
 
-            p {
-                font-size: 1.6em;
-                padding: 1em;
-            }
-        }
+        //     p {
+        //         font-size: 1.6em;
+        //         padding: 1em;
+        //     }
+        // }
 
         &__picture {
             flex-grow: 1;
@@ -140,25 +144,6 @@
     }
 }
 
- /*LOGOS QUE VAN A QUEDAR FIJOS PARA CONTACTO*/
-//  #logocontacto {
-//     position: fixed;
-//     z-index: 10;
-//     overflow: hidden; 
-//     display: block;
-//     right: 10px;
-//     bottom: 5px;
-// }
-
-//   #logo_mail {
-//     position: fixed;
-//     z-index: 10;
-//     overflow: hidden; 
-//     display: block;
-//     right: 10px;
-//     bottom: 50px;
-// }
-
 $spacings:( /*declaramos nuestro mapa*/
     xlarge: 5rem,
     large: 3rem,
@@ -189,3 +174,82 @@ $spacings:( /*declaramos nuestro mapa*/
 #logocontacto {
     @include logos(fixed, 10, hidden, block, 10px, 50px)
 }
+
+.page-section {
+    padding: 7rem 0 2rem 0;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+.px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+
+.px-lg-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+
+  .mt-0 {
+    margin-top: 0 !important;
+  }
+
+  .team-member {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .team-member img {
+    width: 10rem!important;
+    height: 10rem!important;
+    border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  }
+  .team-member h4, .team-member .h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .text-lg-start{
+      color: black!important;
+  }
+
+  .footer {
+      margin-bottom: 1.5rem;
+  }
+
+  .alinear_centro {
+      justify-items: center!important;
+  }
+
+.section_one {
+    padding-bottom: 2rem;
+}
+
+.section_two {
+    padding-bottom: 2rem;
+}
+
+.page-section {
+    color: none;
+}
+
+.card {
+    margin-bottom: 2rem;
+}
+
+.alinear_centro {
+    margin: auto!important;
+}
+
+.link {
+    color: black!important;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+.full {
+    width: 100%!important;
+}
+

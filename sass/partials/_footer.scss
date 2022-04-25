@@ -1,14 +1,36 @@
 /*footer*/
 
 footer {
-    background-color: rgba(105, 105, 105, 0.37);
     grid-column: 1 / 5;
     grid-row: 3;
     text-align: center;
     color: $secondary; 
     height: 10vh;
-
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center
+    
     a {
         text-decoration: none; 
     }
+}
+
+
+.btn-redes {
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    height: 3rem;
+    width: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    color: #fff;
+    background-color: #212529;
+}
+  .btn-redes:hover {
+    background-color: #1c1f23;
 }
